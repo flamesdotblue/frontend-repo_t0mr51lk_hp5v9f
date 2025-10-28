@@ -10,24 +10,15 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start"
+          className="grid grid-cols-1 gap-10 items-start"
         >
-          <div className="lg:col-span-5">
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4">
-              <img
-                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1200&auto=format&fit=crop"
-                alt="Portrait of Dr. Alvaro Cintas"
-                className="aspect-square w-full rounded-xl object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="lg:col-span-7">
+          {/* Removed portrait image: focus the section on copy, stats, and tools */}
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Dr. Alvaro Cintas</h2>
             <p className="mt-3 text-white/70">
               Content creator, full‑stack developer, and tech educator known for innovative digital storytelling. My work blends engineering, design, and pedagogy to make technology cinematic and accessible.
             </p>
-            <div className="mt-6 grid grid-cols-2 gap-4">
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
               <Stat label="Audience Reached" value="500k+" />
               <Stat label="Products Shipped" value="50+" />
               <Stat label="Workshops & Talks" value="100+" />

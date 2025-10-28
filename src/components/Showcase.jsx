@@ -33,26 +33,27 @@ const workProjects = [
   }
 ];
 
+// Updated: Replace placeholder content with provided YouTube tutorials/content
 const contentItems = [
   {
     type: 'video',
-    title: 'Designing with Systems: From Idea to Interface',
-    embed: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    title: 'Tutorial: 1Bqwr2OBPsQ',
+    embed: 'https://www.youtube.com/embed/1Bqwr2OBPsQ'
   },
   {
     type: 'video',
-    title: 'Full-Stack in Motion: Building with Next.js & Edge',
-    embed: 'https://www.youtube.com/embed/oHg5SJYRHA0'
+    title: 'Tutorial: XARr6RnBOc8',
+    embed: 'https://www.youtube.com/embed/XARr6RnBOc8'
   },
   {
-    type: 'article',
-    title: 'Narrative Architecture for Product Teams',
-    link: '#'
+    type: 'video',
+    title: 'Tutorial: YfdEC-P-e34',
+    embed: 'https://www.youtube.com/embed/YfdEC-P-e34'
   },
   {
-    type: 'article',
-    title: 'Practical 3D on the Web: Spline, Three, and UX',
-    link: '#'
+    type: 'video',
+    title: 'Tutorial: HhgilVNjYeA',
+    embed: 'https://www.youtube.com/embed/HhgilVNjYeA'
   }
 ];
 
@@ -136,7 +137,7 @@ export default function Showcase() {
 
         {/* Content Grid */}
         <div className="mt-16">
-          <h3 className="text-xl font-semibold text-white">Recent Content</h3>
+          <h3 className="text-xl font-semibold text-white">Content & Tutorials</h3>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contentItems.map((item, i) => (
               <motion.div
