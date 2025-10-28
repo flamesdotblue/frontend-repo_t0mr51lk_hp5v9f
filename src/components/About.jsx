@@ -5,28 +5,41 @@ export default function About() {
     <section id="about" className="relative py-24 bg-[#020617]">
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-sky-500/5 to-transparent" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          <div className="lg:col-span-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Hi, I’m Flames — I teach, code, and tell stories.</h2>
-            <p className="mt-4 text-white/70">
-              Blending engineering and narrative design, I create videos, workshops, and products that make technology approachable. From full-stack builds to interactive 3D, my work focuses on clarity, playfulness, and real-world impact.
-            </p>
-            <div className="mt-6 grid grid-cols-2 gap-4">
-              <Stat label="Subscribers Reached" value="250k+" />
-              <Stat label="Projects Shipped" value="40+" />
-              <Stat label="Workshops Hosted" value="60+" />
-              <Stat label="Years Teaching" value="7" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start"
+        >
+          <div className="lg:col-span-5">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4">
+              <img
+                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1200&auto=format&fit=crop"
+                alt="Portrait of Dr. Alvaro Cintas"
+                className="aspect-square w-full rounded-xl object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
-          <div className="lg:col-span-6">
-            <div className="relative rounded-2xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-white font-semibold text-lg">What I do</h3>
-              <ul className="mt-4 space-y-3 text-white/80 text-sm">
-                <li className="flex items-start gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-sky-400" />Deep-dive content on web, AI, and product development</li>
-                <li className="flex items-start gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-sky-400" />End-to-end product prototyping and storytelling</li>
-                <li className="flex items-start gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-sky-400" />Workshops for teams and communities</li>
-                <li className="flex items-start gap-3"><span className="mt-1 h-2 w-2 rounded-full bg-sky-400" />Creative coding with 3D, motion, and interactivity</li>
-              </ul>
+          <div className="lg:col-span-7">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Dr. Alvaro Cintas</h2>
+            <p className="mt-3 text-white/70">
+              Content creator, full‑stack developer, and tech educator known for innovative digital storytelling. My work blends engineering, design, and pedagogy to make technology cinematic and accessible.
+            </p>
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              <Stat label="Audience Reached" value="500k+" />
+              <Stat label="Products Shipped" value="50+" />
+              <Stat label="Workshops & Talks" value="100+" />
+              <Stat label="Years in Tech" value="10+" />
+            </div>
+            <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+              <h3 className="text-white font-semibold">Tools I Use</h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {['React', 'Next.js', 'Node.js', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL', 'Tailwind', 'Framer Motion'].map((t) => (
+                  <span key={t} className="text-xs rounded-full border border-white/10 bg-black/30 px-3 py-1 text-white/80">{t}</span>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
