@@ -33,7 +33,7 @@ const workProjects = [
   }
 ];
 
-// Updated: Replace placeholder content with provided YouTube tutorials/content
+// Content & Tutorials: reduced by one video per request (now 3 embeds)
 const contentItems = [
   {
     type: 'video',
@@ -49,11 +49,6 @@ const contentItems = [
     type: 'video',
     title: 'Tutorial: YfdEC-P-e34',
     embed: 'https://www.youtube.com/embed/YfdEC-P-e34'
-  },
-  {
-    type: 'video',
-    title: 'Tutorial: HhgilVNjYeA',
-    embed: 'https://www.youtube.com/embed/HhgilVNjYeA'
   }
 ];
 
