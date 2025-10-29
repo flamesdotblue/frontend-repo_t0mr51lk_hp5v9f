@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Twitter, Youtube, Linkedin, Github } from 'lucide-react';
 import SplineScene from './SplineScene';
 
 export default function Hero() {
@@ -56,9 +57,52 @@ export default function Hero() {
               <span className="h-1 w-1 rounded-full bg-white/30" />
               <span>Workshops • Products • Stories</span>
             </div>
+
+            {/* Social media handles */}
+            <div className="mt-3 flex items-center gap-3">
+              <span className="text-xs text-white/60">Follow</span>
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://twitter.com/alvarocintas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 hover:text-white hover:bg-white/10"
+                >
+                  <Twitter className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@alvarocintas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 hover:text-white hover:bg-white/10"
+                >
+                  <Youtube className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/alvarocintas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 hover:text-white hover:bg-white/10"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://github.com/alvarocintas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/80 hover:text-white hover:bg-white/10"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Right side: Interactive 3D robot */}
+          {/* Right side: Interactive 3D animation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,7 +110,7 @@ export default function Hero() {
             className="relative h-[50vh] sm:h-[60vh] lg:h-[80vh]"
           >
             <SplineScene
-              scene="https://prod.spline.design/lUfiWve0vh3E-uKW/scene.splinecode"
+              scene="https://prod.spline.design/ezRAY9QD27kiJcur/scene.splinecode"
               style={{ width: '100%', height: '100%' }}
             />
             {/* Soft overlay that does not block interaction */}
