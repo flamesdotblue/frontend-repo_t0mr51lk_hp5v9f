@@ -1,28 +1,26 @@
-import React from 'react';
 import Spline from '@splinetool/react-spline';
 
-// A full-bleed Spline canvas with blending to visually remove light backgrounds.
-export default function SplineScene({ scene }) {
+export default function SplineScene() {
   return (
     <div className="relative w-full h-full">
-      <div
-        className="absolute inset-0"
-        style={{
-          // Blend the Spline canvas with the dark site background to suppress light/beige bg
-          mixBlendMode: 'multiply',
-          filter: 'contrast(1.1) saturate(1.1)',
-        }}
-      >
-        <Spline scene={scene} style={{ width: '100%', height: '100%' }} aria-label="Interactive 3D robot scene" />
+      {/* 3D Scene */}
+      <div className="absolute inset-0">
+        <Spline
+          scene="https://prod.spline.design/M4yE7MTeWshitQbr/scene.splinecode"
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
 
-      {/* Soft vignette to further hide any remaining light edges; doesn't block interactions */}
+      {/* Blend helpers to suppress light backgrounds without blocking interactions */}
+      <div className="pointer-events-none absolute inset-0 mix-blend-multiply filter brightness-110 contrast-110" aria-hidden="true" />
+
+      {/* Soft vignette for cinematic depth */}
       <div
-        aria-hidden
         className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
         style={{
           background:
-            'radial-gradient(60% 60% at 60% 50%, rgba(2,6,23,0) 0%, rgba(2,6,23,0.2) 60%, rgba(2,6,23,0.6) 100%)',
+            'radial-gradient(1200px 600px at 70% 40%, rgba(255,255,255,0.04), rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.6) 100%)',
         }}
       />
     </div>
