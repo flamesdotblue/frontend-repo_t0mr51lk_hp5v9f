@@ -15,7 +15,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full pt-24 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left side: Text content restored */}
+          {/* Left side: Text content */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,7 +102,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right side: Interactive 3D animation */}
+          {/* Right side: Interactive 3D animation (robot) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function Hero() {
             className="relative h-[50vh] sm:h-[60vh] lg:h-[80vh]"
           >
             <SplineScene
-              scene="https://prod.spline.design/ezRAY9QD27kiJcur/scene.splinecode"
+              scene="https://prod.spline.design/M4yE7MTeWshitQbr/scene.splinecode"
               style={{ width: '100%', height: '100%' }}
             />
             {/* Soft overlay that does not block interaction */}
